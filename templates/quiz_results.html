@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="quiz-section">
+    <h2>Quiz Results</h2>
+    <p>Well done! You’ve completed the quiz.</p>
+    <p>Your final score: <strong>{{ score }}</strong> out of <strong>{{ total_questions }}</strong>.</p>
+
+    <div class="quiz-actions">
+        <a href="{{ url_for('quiz_easy') }}" class="btn">Back to Easy Quizzes</a>
+        <a href="{{ url_for('index') }}" class="btn">Home</a>
+        <a href="{{ url_for('quiz') }}" class="btn">Try Another Quiz</a>
+    </div>
+</section>
+{% endblock %}

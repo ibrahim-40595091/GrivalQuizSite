@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="quiz-container">
+    <h2>Guess the Game by Plot</h2>
+    <p>Read the plot descriptions and type the corresponding game titles.</p>
+
+    <ul id="plot-list">
+        {% for question in questions %}
+        <li data-answer="{{ question['answer'] }}">{{ question['plot'] }}</li>
+        {% endfor %}
+    </ul>
+
+    <input type="text" id="answer-input" placeholder="Type your answer here">
+    <p id="feedback"></p>
+</section>
+
+<script>
+    const answerInput = document.getElementById('answer-input');
+    const plotList = document.getElementById('plot-list');
+    const feedback = document.getElementById('feedback');
+
+    answerInput.addEventListener('input', () => {
+        const input = answerInput.value.trim().toLowerCase();
+        let found = false;
+
+        plotList.querySelectorAll('li').forEach(item => {
+            const correctAnswer = item.dataset.answer.toLowerCase();
+            if (input === correctAnswer) {
+                item.textContent = item.dataset.answer;
+                item.dataset.answer = "";
+                feedback.textContent = "Correct! Keep going!";
+                found = true;
+                answerInput.value = "";
+            }
+        });
+
+        if (!found && input !== "") {
+            feedback.textContent = "Keep trying!";
+        }
+    });
+</script>
+{% endblock %}

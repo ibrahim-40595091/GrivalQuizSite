@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="quiz-container-base hard-quiz-container">
+    <h2>Hard Quiz</h2>
+    <p>Think you’re a pro? Prove it with the ultimate challenge. Only true gamer heads will win this!</p>
+    <ul>
+        <li><a href="{{ url_for('guess_game_item') }}" class="btn">Guess the Game Item</a></li>
+        <li><a href="{{ url_for('guess_game_world') }}" class="btn">Guess the Game World</a></li>
+        <li><a href="{{ url_for('hard_quiz_3') }}" class="btn">Guess the Iconic Weapon</a></li>
+    </ul>
+</section>
+{% endblock %}

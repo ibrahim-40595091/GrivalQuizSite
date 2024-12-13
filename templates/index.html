@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="home">
+    <h2>Grivia</h2>
+    <p>
+        Welcome you have arrived at the ultimate game quiz site.<br>
+        Dive into the world of gaming and test your gaming knowledge<br>
+        with brain twisting and engaging quizzes!<br><br>
+        Whether you're a casual gamer or a hardcore one we've got quizzes of all<br>
+        difficulties to push and test your gaming knowledge!<br>
+        Get ready to prove that you're <b>THE</b> ultimate gamer!
+    </p>
+    <div class="button-container">
+        <a href="{{ url_for('quiz_easy') }}" class="btn btn-easy">Easy</a>
+        <a href="{{ url_for('quiz_medium') }}" class="btn btn-medium">Medium</a>
+        <a href="{{ url_for('quiz_hard') }}" class="btn btn-hard">Hard</a>
+    </div>
+</section>
+{% endblock %}

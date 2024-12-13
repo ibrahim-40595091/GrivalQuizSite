@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="quiz-container-base hard-quiz-container">
+    <h2>Guess the Iconic Weapon</h2>
+    <div id="timer" class="timer">Time Left: <span id="time-left">10</span>s</div>
+    <img src="{{ url_for('static', filename=question['image']) }}" alt="Weapon" class="quiz-image">
+    <form method="POST" id="quiz-form">
+        <select id="answer-dropdown" name="answer" required>
+            <option value="" disabled selected>Choose the weapon</option>
+            {% for option in question['options'] %}
+            <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+    <p id="feedback"></p>
+</section>
+
+<script>
+    let timeLeft = 10;
+    const timerDisplay = document.getElementById('time-left');
+    const form = document.getElementById('quiz-form');
+
+    // Countdown Timer
+    const timer = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            alert("Time's up! Game over.");
+            form.querySelector('button').disabled = true; // Disable submission
+        }
+    }, 1000);
+
+    // Automatically submit the form when an option is selected
+    const dropdown = document.getElementById('answer-dropdown');
+    dropdown.addEventListener('change', () => {
+        form.submit();
+    });
+</script>
+{% endblock %}

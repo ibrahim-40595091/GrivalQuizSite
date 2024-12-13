@@ -1,0 +1,456 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Updated font */
+    margin: 0;
+    padding: 0;
+    background: url('/static/images/webpagebg.png') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    color: #fff;
+}
+
+/* Navbar Title Styling */
+nav h1 {
+    font-size: 3rem; /* Make it larger to stand out */
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold; /* Bold font for emphasis */
+    color: #1abc9c; /* Accent color for distinction */
+    margin: 0;
+    left: 27px;
+    bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;/* Space between the title and the rest of the navbar */
+    letter-spacing: 2px; /* Adds spacing between letters for a clean look */
+}
+
+/* Add hover effect to the title */
+nav h1:hover {
+    text-shadow: 0 4px 15px rgba(26, 188, 156, 0.8); /* Subtle glow on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: all 0.3s ease; /* Smooth animation */
+}
+
+nav h1 {
+    position: relative;
+    display: inline-block;
+}
+
+nav h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #1abc9c;
+    transition: width 0.3s ease;
+}
+
+nav h1:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+nav h1 {
+    background: linear-gradient(to right, #1abc9c, #16a085);
+    -webkit-background-clip: text;
+    color: transparent; /* Makes the gradient apply to the text */
+}
+
+/* About Us Page */
+.about-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.about-header h2 {
+    font-size: 2.5rem;
+    color: #1abc9c;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+/* Contact Us Page */
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-header h2 {
+    font-size: 2.5rem;
+    color: #1abc9c;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #1abc9c;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #16a085;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #16a085;
+    box-shadow: 0 4px 10px rgba(26, 188, 156, 0.5);
+}
+
+/* Style for the controller icon */
+.controller-icon {
+    position: absolute;
+    top: 46px;
+    left: 70px;
+    font-size: 4rem; /* Make the icon larger */
+    margin-right: 15px; /* Add space between the icon and links */
+    color: #1abc9c; /* Start with a single color (fallback) */
+    background: linear-gradient(45deg, #1abc9c, #3498db); /* Add gradient */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    -webkit-text-fill-color: transparent; /* Make background clip visible */
+    display: inline-block;
+    vertical-align: middle; /* Align with text */
+}
+
+
+/* Navigation Bar */
+header nav {
+    display: flex; /* Use Flexbox for horizontal alignment */
+    justify-content: flex-start; /* Align navigation links to the left */
+    padding: 1rem; /* Add some spacing */
+    margin: 50px 0 0 150px; /* Remove any default margins */
+}
+
+
+header nav ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Keep links in a row */
+    gap: 50px; /* Space between the links */
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+/* Active Link Styling */
+header nav ul li a.active {
+    font-size: 1.2rem; /* Slightly larger font for the active link */
+    color: white; /* Highlight the active link */
+    font-weight: bold; /* Make the active link bold */
+}
+
+/* Default styling for non-active links */
+header nav ul li a {
+    text-decoration: none; /* Keep underline removed */
+    font-size: 1rem; /* Default size for non-active links */
+    padding: 0.5rem 1rem; /* Keep the padding as is */
+    border-radius: 5px; /* Maintain the rounded corners */
+    color: grey; /* Default grey color for non-active links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+header nav ul li a:hover {
+    color: #fff; /* White text on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle background on hover */
+}
+
+/* Shared Base Style for All Quizzes */
+.quiz-container-base {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/* Shared Heading Style */
+.quiz-container-base h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Shared Button Style */
+.quiz-container-base .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-container-base .btn:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Shared Input Style */
+.quiz-container-base input[type="text"],
+.quiz-container-base input[type="radio"] {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/* Shared List Item Style */
+.quiz-container-base ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Easy Quiz Customizations */
+.easy-quiz-container {
+    border: 2px solid #3498db; /* Blue accent for easy quiz */
+}
+
+.easy-quiz-container h2 {
+    color: #3498db; /* Blue heading */
+}
+
+.easy-quiz-container .btn {
+    background-color: #3498db;
+}
+
+.easy-quiz-container img {
+    max-width: 200px; /* Set the maximum width */
+    height: auto; /* Maintains the aspect ratio */
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.easy-quiz-container .btn:hover {
+    background-color: #2980b9;
+}
+
+/* Medium Quiz Customizations */
+.medium-quiz-container {
+    border: 2px solid #1abc9c; /* Green accent for medium quiz */
+}
+
+.medium-quiz-container h2 {
+    color: #1abc9c; /* Green heading */
+}
+
+.medium-quiz-container .btn {
+    background-color: #1abc9c;
+}
+
+.medium-quiz-container .btn:hover {
+    background-color: #16a085;
+}
+
+.hard-quiz-container {
+    border: 2px solid #e74c3c; /* Red border for hard quizzes */
+}
+
+.hard-quiz-container h2 {
+    color: #e74c3c; /* Red heading */
+}
+
+.timer {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.quiz-image {
+    width: 300px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#answer-dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #e74c3c;
+    margin-bottom: 20px;
+}
+
+#answer-dropdown:focus {
+    outline: none;
+    border-color: #c0392b;
+}
+
+.btn {
+    background-color: #e74c3c;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+
+
+/* Ensure the page takes full height */
+html, body {
+    height: 100%; /* Makes sure the height covers the full viewport */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+}
+
+/* Main content takes remaining space */
+main {
+    flex: 1; /* This pushes the footer to the bottom */
+}
+
+/* Footer always at the bottom */
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    position: relative; /* Ensures it stays in normal flow */
+}
+
+/* Home Section */
+.home {
+    text-align: left;
+    margin-left: 300px;
+    padding: 50px 20px;
+}
+
+.home h2 {
+    font-size: 3rem;
+    margin-top: 40px;
+    color: #1abc9c; /* Accent color for heading */
+}
+
+.home p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 130px;
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    margin-top: 30px;
+    justify-content: left;
+    gap: 75px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #121212;
+    background-color: #1abc9c; /* Accent color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Pop-out effect */
+    box-shadow: 0 4px 15px rgba(26, 188, 156, 0.5); /* Soft shadow */
+}
+
+/* Button Variants */
+.btn-easy {
+    background-color: #1abc9c;
+}
+
+.btn-medium {
+    background-color: #f39c12;
+}
+
+.btn-hard {
+    background-color: #e74c3c;
+}
+
+.btn-easy:hover {
+    box-shadow: 0 4px 15px rgba(26, 188, 156, 0.5);
+}
+
+.btn-medium:hover {
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.5);
+}
+
+.btn-hard:hover {
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.5);
+}

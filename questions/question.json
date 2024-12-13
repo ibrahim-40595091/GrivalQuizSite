@@ -1,0 +1,42 @@
+{
+    "guess_character_image": [
+        {
+            "image": "images/mario.png",
+            "question": "Who is this iconic character?",
+            "options": ["Mario", "Luigi", "Wario", "Yoshi"],
+            "answer": "Mario"
+        },
+        {
+            "image": "images/sonic.png",
+            "question": "Who is this speedy character?",
+            "options": ["Sonic", "Shadow", "Tails", "Knuckles"],
+            "answer": "Sonic"
+        }
+    ],
+    "guess_lead_character": [
+        {
+            "question": "Who is the lead character in The Legend of Zelda?",
+            "options": ["Zelda", "Link", "Ganon", "Sheik"],
+            "answer": "Link"
+        },
+        {
+            "question": "Who is the protagonist in the game Halo?",
+            "options": ["Master Chief", "Cortana", "Arbiter", "Johnson"],
+            "answer": "Master Chief"
+        }
+    ],
+    "guess_game_by_enemy": [
+        {
+            "image": "images/bowser.png",
+            "question": "Which game features this iconic villain?",
+            "options": ["Super Mario Bros", "Sonic the Hedgehog", "The Legend of Zelda", "Donkey Kong"],
+            "answer": "Super Mario Bros"
+        },
+        {
+            "image": "images/Dr_Eggman.png",
+            "question": "Which game features this iconic villain?",
+            "options": ["Sonic the Hedgehog", "Mega Man", "Pac-Man", "Spyro"],
+            "answer": "Sonic the Hedgehog"
+        }
+    ]
+}

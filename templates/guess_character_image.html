@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="quiz-container">
+    <!-- Image Section -->
+    <div class="quiz-image-section">
+        {% if index == 1 %}
+        <img src="{{ url_for('static', filename='images/mario.png') }}" alt="Quiz Image" class="quiz-image">
+        {% elif index == 2 %}
+        <img src="{{ url_for('static', filename='images/sonic.png') }}" alt="Quiz Image" class="quiz-image">
+        {% endif %}
+    </div>
+
+    <!-- Question Section -->
+    <div class="quiz-question-section">
+        <h2>Question {{ index }}</h2>
+        <p>{{ question['question'] }}</p>
+        <form method="POST">
+            {% for option in question['options'] %}
+            <div class="option-container">
+                <input type="radio" id="{{ option }}" name="option" value="{{ option }}" required>
+                <label for="{{ option }}">{{ option }}</label>
+            </div>
+            {% endfor %}
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

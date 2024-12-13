@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="quiz-container-base medium-quiz-container">
+    <h2>Complete the Game Name</h2>
+    <p>Type the full name of the games below. Correct answers will be revealed!</p>
+
+    <ul id="game-list">
+        {% for question in questions %}
+        <li data-answer="{{ question['answer'] }}">{{ question['incomplete'] }}</li>
+        {% endfor %}
+    </ul>
+
+    <input type="text" id="answer-input" placeholder="Type your answer here...">
+    <p id="feedback"></p>
+</section>
+
+<script>
+    const answerInput = document.getElementById('answer-input');
+    const gameList = document.getElementById('game-list');
+    const feedback = document.getElementById('feedback');
+
+    answerInput.addEventListener('input', () => {
+        const input = answerInput.value.trim().toLowerCase();
+        let found = false;
+
+        gameList.querySelectorAll('li').forEach(item => {
+            const correctAnswer = item.dataset.answer.toLowerCase();
+            if (input === correctAnswer) {
+                item.textContent = item.dataset.answer;
+                item.dataset.answer = ""; // Prevent duplicate checking
+                feedback.textContent = "Correct! Keep going!";
+                found = true;
+                answerInput.value = ""; // Clear the input box
+            }
+        });
+
+        if (!found && input !== "") {
+            feedback.textContent = "Keep trying!";
+        }
+    });
+</script>
+{% endblock %}

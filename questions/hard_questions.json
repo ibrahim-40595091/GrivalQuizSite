@@ -1,0 +1,38 @@
+{
+    "guess_game_item": [
+        {
+            "image": "images/Fortnite_Small_Shield_Potion.png",
+            "options": ["Health Potion", "Mana Potion", "Elixir", "Small Shield Potion"],
+            "answer": "Small Shield Potion"
+        },
+        {
+            "image": "images/Hearsteel.png",
+            "options": ["Power-Up Shield", "Heartsteel", "Golden Vines", "Mega Spikey Mushroom"],
+            "answer": "Heartsteel"
+        }
+    ],
+    "guess_game_world": [
+        {
+            "image": "images/Dark_Souls_3.png",
+            "options": ["Dark Souls 3", "Mushroom Kingdom", "Skyrim", "Pandora"],
+            "answer": "Dark Souls 3"
+        },
+        {
+            "image": "images/Subnautica.png",
+            "options": ["Hyrule", "Subnautica", "Skyrim", "Pandora"],
+            "answer": "Subnautica"
+        }
+    ],
+    "hard_quiz_3": [
+        {
+            "image": "images/Stygius.png",
+            "options": ["Hidden Blade", "Keyblade", "Styguis", "Master Sword"],
+            "answer": "Styguis"
+        },
+        {
+            "image": "images/Gold_Scar.png",
+            "options": ["Gold Scar", "Assault Rifle", "Plasma Rifle", "BFG 9000"],
+            "answer": "Gold Scar"
+        }
+    ]
+}

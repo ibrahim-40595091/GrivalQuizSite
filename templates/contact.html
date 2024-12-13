@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <h2>Contact Us</h2>
+        <p>Have any questions, feedback, or suggestions? We’d love to hear from you!</p>
+        <p><i class="fas fa-envelope"></i> Grival@ultimatequiz.com</p>
+        <p><i class="fas fa-phone"></i> +424 143 2342</p>
+
+    <form class="contact-form" action="/submit_contact" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+{% endblock %}

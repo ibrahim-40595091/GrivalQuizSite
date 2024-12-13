@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="quiz-container">
+    <h2>Medium Quizzes</h2>
+    <ul>
+        <li><a href="{{ url_for('complete_game_name') }}">Complete the Game Name</a></li>
+        <li><a href="{{ url_for('guess_game_by_plot') }}">Guess the Game by Plot</a></li>
+        <li><a href="{{ url_for('match_year') }}">Match the Year</a></li>
+    </ul>
+</section>
+{% endblock %}

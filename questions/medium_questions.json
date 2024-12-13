@@ -1,0 +1,44 @@
+{
+    "complete_game_name": [
+        {
+            "incomplete": "The Legend of Zelda: _______ __ ____",
+            "answer": "The Legend of Zelda: Ocarina of Time"
+        },
+        {
+            "incomplete": "Super Mario _______",
+            "answer": "Super Mario Bros"
+        },
+        {
+            "incomplete": "Call of Duty: ______ ______",
+            "answer": "Call of Duty: Modern Warfare"
+        }
+    ],
+    "guess_game_by_plot": [
+        {
+            "plot": "A smuggler and a young girl journey across a post-apocalyptic America.",
+            "answer": "The Last of Us"
+        },
+        {
+            "plot": "A sandbox game where players can build and explore blocky worlds.",
+            "answer": "Minecraft"
+        },
+        {
+            "plot": "A battle royale game where players compete to be the last standing.",
+            "answer": "Fortnite"
+        }
+    ],
+    "match_year": [
+        {
+            "year": "1985",
+            "answer": "Super Mario Bros"
+        },
+        {
+            "year": "2001",
+            "answer": "Halo: Combat Evolved"
+        },
+        {
+            "year": "2013",
+            "answer": "The Last of Us"
+        }
+    ]
+}
